@@ -22,10 +22,10 @@ Template starter with React Navigation Bottom Tabs
    npm install
    ```
 
-5. Start the environtment
+5. Start the enviornment (Modified for our purposes)
 
    ```jsx
-   expo start
+   npx expo start --tunnel
    ```
 
 ### Rapi UI
