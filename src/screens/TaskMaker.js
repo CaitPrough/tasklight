@@ -13,7 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function ({ navigation }) {
   const { isDarkmode } = useTheme();
-  const [text, setText] = useState('Useless Text');
+  const [text, setText] = useState('Enter Here');
   return (
     <Layout>
       <TopNav
