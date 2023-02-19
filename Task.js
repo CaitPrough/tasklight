@@ -36,7 +36,7 @@ function isTaskOverdue(task, today = todayDate) {
     }
 }
 
-function areTasksOverdue() {
+export function areTasksOverdue() {
     for (let i = 0; taskText.length - 1; i++) {
         if (isTaskOverdue(getTask(i))) {
             return true
