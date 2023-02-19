@@ -29,18 +29,14 @@ function parseDate (date) {
 
 function isTaskOverdue(task, today = todayDate) {
     let deadline = task[1]
-    if (deadline[2] < today[2]) {
-        return true
-    } else if (deadline[0] < today[0]) {
-        return true
-    } else if (deadline[1] < today[1]) {
+    if (deadline[0] < today[0] || deadline[1] < today[1] || deadline[2] < today[2]) {
         return true
     } else {
         return false
     }
 }
 
-function areTasksOverdue() {
+export function areTasksOverdue() {
     for (let i = 0; taskText.length - 1; i++) {
         if (isTaskOverdue(getTask(i))) {
             return true

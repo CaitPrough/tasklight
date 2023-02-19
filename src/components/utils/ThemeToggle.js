@@ -1,34 +1,30 @@
 import React, { useState } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { View, Text, Linking } from 'react-native';
 import FontAwesomeIcon from '@expo/vector-icons/FontAwesome'
-
-import { Picker, useTheme } from 'react-native-rapi-ui';
+import { Picker, useTheme, Section, SectionContent } from 'react-native-rapi-ui';
+import currentTheme from './CheckTheme';
 
 const DarkModeToggle = () => {
+  const [pickerValue, setPickerValue] = React.useState(null);
   const { isDarkmode, setTheme } = useTheme();
-
-  const handleToggle = (value) => {
-    setIsDarkMode(value === 'dark');
-  };
-
+  const items = [
+      { label: 'Dark Mode', value: 'dark' },
+      { label: 'Light Mode', value: 'light' },
+  ];
   return (
-    <Picker
-      items={[
-        { value: 'light', label: <FontAwesomeIcon name="sun-o" /> },
-        { value: 'dark', label: <FontAwesomeIcon name="moon-o" /> },
-      ]}
-      text={isDarkmode ? "Light Mode" : "Dark Mode"}
-              status={isDarkmode ? "success" : "warning"}
-              onPress={() => {
-                if (isDarkmode) {
-                  
-                } else {
-                  setTheme("dark");
-                }
-              }}
-      onChange={handleToggle}
-    />
+      <Section style={{ marginHorizontal: 20, marginTop: 20 }}>
+          <SectionContent>
+              <View>
+                  <Text style={{ marginBottom: 10 }}>Theme</Text>
+                  <Picker
+                      items={items}
+                      value={pickerValue}
+                      placeholder="Theme"
+                      onValueChange={(val) => setTheme(val)}
+                  />
+              </View>
+          </SectionContent>
+      </Section>
   );
 };
 

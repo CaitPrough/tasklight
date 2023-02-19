@@ -24,7 +24,7 @@ export default function ({ navigation }) {
         <Section>
           <SectionContent>
             <Text fontWeight="bold" style={{ textAlign: "center" }}>
-              These UI components provided by Rapi UI
+              pain. it's a pain. it's a pain. it's a pain. it's a pain. it's a
             </Text>
             <Button
               style={{ marginTop: 10 }}
