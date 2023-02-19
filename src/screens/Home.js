@@ -17,7 +17,9 @@ import TaskInput from "../components/utils/NewTask";
 
 export default function ({ navigation }) {
     const { isDarkmode, setTheme } = useTheme();
-    const [checkBox, setCheckbox] = React.useState(false)
+    const [checkBox1, setCheckbox1] = React.useState(false)
+    const [checkBox2, setCheckbox2] = React.useState(false);
+    const [checkBox3, setCheckbox3] = React.useState(false);
     //To do list
     return (
     <Layout>
@@ -26,26 +28,26 @@ export default function ({ navigation }) {
                 <Text size="h1" fontWeight="bold" style={{color: isDarkmode ? 'white' : 'black'}}>Tasklight <FontAwesomeIcon size={35} name="lightbulb-o"></FontAwesomeIcon> </Text>
             </View>
             <View style={{flexDirection: 'row', alignItems:"center", marginVertical:10, marginHorizontal:20}}>
-            <CheckBox value={checkBox} onValueChange={(val) => setCheckbox(val)} />
+            <CheckBox value={checkBox1} onValueChange={(val) => setCheckbox1(val)} />
                 <Section style={{marginHorizontal:20, alignItems:"center"}}>
                     <SectionContent>
-                        <Text>Welcome</Text>
+                        <Text>Get Physics Homework done</Text>
                     </SectionContent>
                 </Section>
             </View>
             <View style={{flexDirection: 'row', alignItems:"center", marginVertical:10, marginHorizontal:20}}>
-            <CheckBox value={checkBox} onValueChange={(val) => setCheckbox(val)} />
+            <CheckBox value={checkBox2} onValueChange={(val) => setCheckbox2(val)} />
                 <Section style={{marginHorizontal:20, alignItems:"center"}}>
                     <SectionContent>
-                        <Text>Welcome</Text>
+                        <Text>Finish newspaper piece</Text>
                     </SectionContent>
                 </Section>
             </View>
             <View style={{flexDirection: 'row', alignItems:"center", marginVertical:10, marginHorizontal:20}}>
-            <CheckBox value={checkBox} onValueChange={(val) => setCheckbox(val)} />
+            <CheckBox value={checkBox3} onValueChange={(val) => setCheckbox3(val)} />
                 <Section style={{marginHorizontal:20, alignItems:"center"}}>
                     <SectionContent>
-                        <Text>Welcome</Text>
+                        <Text>code out CS project</Text>
                     </SectionContent>
                 </Section>
             </View>
