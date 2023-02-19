@@ -13,19 +13,25 @@ import {
 import TaskInput from "../components/utils/NewTask";
 
 
-
-export default function ({ navigation }) {
+const AddTaskPage = () => {
+    const [text, setText] = React.useState('');
     const { isDarkmode, setTheme } = useTheme();
-    //To do list//
-    //Add checklists here
     return (
-    <Layout>
-        <ScrollView>
+        <>
+        <Layout>
             <View style={{alignItems:"center", marginVertical:20}}>
                 <Text size="h1" fontWeight="bold" style={{color: isDarkmode ? 'white' : 'black'}}>Tasklight <FontAwesomeIcon size={35} name="lightbulb-o"></FontAwesomeIcon> </Text>
             </View>
-            
-        </ScrollView>
-    </Layout>
-    )
-}
+            <Text style={{ marginBottom: 10 }}>TextInput</Text>
+            <TextInput
+                placeholder="Enter your text"
+                value={text}
+                onChangeText={(val) => setText(val)}
+            />
+            <TaskInput/>
+        </Layout>
+        </>
+    );
+};
+
+export default AddTaskPage;

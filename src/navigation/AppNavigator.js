@@ -13,6 +13,7 @@ import TaskMaker from "../screens/TaskMaker";
 import Settings from "../screens/Settings";
 import { Feather } from '@expo/vector-icons'; 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import AddTaskPage from "../screens/AddTaskPage";
 
 const MainStack = createNativeStackNavigator();
 const Main = () => {
@@ -56,7 +57,7 @@ const MainTabs = () => {
       />
       <Tabs.Screen
         name="Add Task"
-        component={Home}
+        component={AddTaskPage}
         options={{
           tabBarLabel: ({ focused }) => (
             <TabBarText focused={focused} title="Add Task" />
