@@ -40,14 +40,14 @@ const MainTabs = () => {
     >
       {/* these icons using Ionicons */}
       <Tabs.Screen
-        name="Home"
+        name="To-Do"
         component={Home}
         options={{
           tabBarLabel: ({ focused }) => (
-            <TabBarText focused={focused} title="Home" />
+            <TabBarText focused={focused} title="To-Do" />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"md-home"} />
+            <TabBarIcon focused={focused} icon={"list"} />
           ),
         }}
       />
@@ -60,7 +60,7 @@ const MainTabs = () => {
             <TabBarText focused={focused} title="Settings" />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"ios-information-circle"} />
+            <TabBarIcon focused={focused} icon={"ios-settings"} />
           ),
         }}
       />
