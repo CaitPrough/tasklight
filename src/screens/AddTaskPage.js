@@ -9,6 +9,8 @@ import {
   SectionContent,
   useTheme,
   TextInput,
+  CheckBox,
+  setCheckbox,
 } from "react-native-rapi-ui";
 import TaskInput from "../components/utils/NewTask";
 
@@ -16,6 +18,7 @@ import TaskInput from "../components/utils/NewTask";
 
 const AddTaskPage = () => {
     const [text, setText] = useState('');
+    const [checkBox, setCheckbox] = useState(false);
     const { isDarkmode, setTheme } = useTheme();
     return (
         <>
@@ -37,7 +40,14 @@ const AddTaskPage = () => {
                                 <FontAwesomeIcon name="pencil" size={30} />
                             }
                         />
+                        <View style={{ marginTop:21, flexDirection: 'row'}}>
+                            <CheckBox value={checkBox} onValueChange={(val) => setCheckbox(val)} />
+                            <Text size="lg" style={{ marginTop: 3, marginLeft: 10, color: isDarkmode ? 'white' : 'black' }}>
+                                Send me notifications
+                            </Text>
+                        </View>
                         <Button text="Add" style={{marginTop:15}} onPress={() => alert('Button tapped')} ></Button>
+
                     </SectionContent>
                 </Section>
             </View>
