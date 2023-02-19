@@ -12,7 +12,6 @@ import {
   CheckBox,
   setCheckbox,
 } from "react-native-rapi-ui";
-import TaskInput from "../components/utils/NewTask";
 
 
 
@@ -40,6 +39,7 @@ const AddTaskPage = () => {
                                 <FontAwesomeIcon name="pencil" size={30} />
                             }
                         />
+                        
                         <View style={{ marginTop:21, flexDirection: 'row'}}>
                             <CheckBox value={checkBox} onValueChange={(val) => setCheckbox(val)} />
                             <Text size="lg" style={{ marginTop: 3, marginLeft: 10, color: isDarkmode ? 'white' : 'black' }}>

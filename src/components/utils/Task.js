@@ -1,7 +1,3 @@
-import React from "react"
-import AppNavigator from "../../navigation/AppNavigator";
-import { ThemeProvider} from "react-native-rapi-ui";
-
 // the two arrays that contain all tasks
 // currently starts with two placeholder tasks for testing (one due today, one overdue)
 let taskText = ["Finish coding Tasklight", "Do that overdue homework"]

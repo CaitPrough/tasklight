@@ -9,7 +9,6 @@ import TabBarText from "../components/utils/TabBarText";
 
 import Home from "../screens/Home";
 import NotificationScreen from "../screens/NotificationScreen";
-import TaskMaker from "../screens/TaskMaker";
 import Settings from "../screens/Settings";
 import { Feather } from '@expo/vector-icons'; 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -24,7 +23,6 @@ const Main = () => {
       }}
     >
       <MainStack.Screen name="MainTabs" component={MainTabs} />
-      <MainStack.Screen name="TaskMaker" component={TaskMaker} />
     </MainStack.Navigator>
   );
 };
