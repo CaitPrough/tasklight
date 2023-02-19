@@ -39,3 +39,13 @@ function randomMessage(array) {
 function returnMessage() {
     return (isAngry() ? randomMessage(insultsList) : randomMessage(congratsList))
 }
+
+// input "due" for tasks due soon, input anything else for missing a task
+function returnTitle(type) {
+    if (type == "due") {
+        return (isAngry() ? "You are going to miss another task!" : "You have a task due soon!")
+    } else {
+        return (isAngry() ? "You missed another task!" : "YOU MISSED A TASK? NOW I'M MAD >:(")
+    }
+    
+}
