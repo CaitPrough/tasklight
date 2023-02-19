@@ -3,6 +3,10 @@ import { Text, View, Button, Platform } from 'react-native';
 import * as Device from 'expo-device';
 import * as Notifications from 'expo-notifications';
 import { Layout, useTheme } from 'react-native-rapi-ui';
+import Personality from "../components/utils/Personality"
+
+let messageTitle = Personality.returnTitleUpcoming()
+let messageBody = Personality.returnTitleOverdue()
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -64,8 +68,8 @@ export default function App() {
 async function schedulePushNotification() {
   await Notifications.scheduleNotificationAsync({
     content: {
-      title: "You've got mail! 📬",
-      body: 'Here is the notification body',
+      title: messageTitle,
+      body: messageBody,
       data: { data: 'goes here' },
     },
     trigger: { seconds: 2 },
