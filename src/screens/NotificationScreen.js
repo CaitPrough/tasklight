@@ -5,7 +5,7 @@ import * as Notifications from 'expo-notifications';
 import { Layout, useTheme } from 'react-native-rapi-ui';
 import Personality from '../components/utils/Personality'
 
-let messageTitle = Personality.returnTitle()
+let messageTitle = Personality.returnTitleUpcoming()
 let messageBody = Personality.returnMessage()
 
 Notifications.setNotificationHandler({

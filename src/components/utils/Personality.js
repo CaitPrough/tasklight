@@ -34,12 +34,10 @@ export function returnMessage() {
     return (isAngry() ? randomMessage(insultsList) : randomMessage(congratsList))
 }
 
-// input "due" for tasks due soon, input anything else for missing a task
-export function returnTitle(type) {
-    if (type == "due") {
-        return (isAngry() ? "You are going to miss another task!" : "You have a task due soon!")
-    } else {
-        return (isAngry() ? "You missed another task!" : "YOU MISSED A TASK? NOW I'M MAD >:(")
-    }
-    
+export function returnTitleUpcoming() {
+    return (isAngry() ? "You are going to miss another task!" : "You have a task due soon!")
+}
+
+export function returnTitleOverdue() {
+    return (isAngry() ? "You missed another task!" : "YOU MISSED A TASK? NOW I'M MAD >:(")
 }
