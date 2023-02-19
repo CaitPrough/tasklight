@@ -8,7 +8,9 @@ import TabBarIcon from "../components/utils/TabBarIcon";
 import TabBarText from "../components/utils/TabBarText";
 
 import Home from "../screens/Home";
-import SecondScreen from "../screens/TaskMaker";
+import SecondScreen from "../screens/SecondScreen";
+import NotificationScreen from "../screens/NotificationScreen";
+import TaskMaker from "../screens/TaskMaker";
 import Settings from "../screens/Settings";
 
 const MainStack = createNativeStackNavigator();
@@ -20,7 +22,7 @@ const Main = () => {
       }}
     >
       <MainStack.Screen name="MainTabs" component={MainTabs} />
-      <MainStack.Screen name="SecondScreen" component={SecondScreen} />
+      <MainStack.Screen name="TaskMaker" component={TaskMaker} />
     </MainStack.Navigator>
   );
 };
@@ -58,6 +60,18 @@ const MainTabs = () => {
         options={{
           tabBarLabel: ({ focused }) => (
             <TabBarText focused={focused} title="Settings" />
+          ),
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} icon={"ios-information-circle"} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Notifications"
+        component={NotificationScreen}
+        options={{
+          tabBarLabel: ({ focused }) => (
+            <TabBarText focused={focused} title="Notifications" />
           ),
           tabBarIcon: ({ focused }) => (
             <TabBarIcon focused={focused} icon={"ios-information-circle"} />
