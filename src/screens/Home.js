@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Linking } from "react-native";
+import { View, Linking, ScrollView } from "react-native";
+import FontAwesomeIcon from '@expo/vector-icons/FontAwesome'
 import {
   Layout,
   Button,
@@ -7,9 +8,9 @@ import {
   Section,
   SectionContent,
   useTheme,
+  TextInput,
 } from "react-native-rapi-ui";
-import pxToEm from '../components/utils/pxToEm';
-import pxtoRem from '../components/utils/pxToRem';
+import TaskInput from "../components/utils/NewTask";
 
 
 export default function ({ navigation }) {
@@ -17,9 +18,14 @@ export default function ({ navigation }) {
     //To do list
     return (
     <Layout>
-        <View style={{alignItems:"center", marginVertical:pxToEm(10)}}>
-
-        </View>
+        <ScrollView>
+            <View style={{alignItems:"center", marginVertical:20}}>
+                <Text size="h1" fontWeight="bold" style={{color: isDarkmode ? 'white' : 'black'}}>Tasklight <FontAwesomeIcon size={35} name="lightbulb-o"></FontAwesomeIcon> </Text>
+            </View>
+            <View style={{alignItems:"left", marginVertical:10}}>
+                <TaskInput/>
+            </View>
+        </ScrollView>
     </Layout>
     )
 }
