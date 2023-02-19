@@ -9,9 +9,7 @@ const TaskInput = () => {
     const { isDarkmode, setTheme } = useTheme();
     return (
         <>
-        <Layout>
-            <View>
-                <Text style={{ marginBottom: 10 }}>New task</Text>
+        
                 <Text fontWeight="bold">Task</Text>
                 <TextInput
                     placeholder="Enter your text"
@@ -19,11 +17,9 @@ const TaskInput = () => {
                     //onChangeText={(val) => setText(val)}
                     //use this to update storage i think
                     rightContent={
-                        <FontAwesomeIcon name="pencil" size={20} />
+                        <FontAwesomeIcon name="pencil" size={30} />
                     }   
                 />
-            </View>
-        </Layout>
         </>
     )
 }

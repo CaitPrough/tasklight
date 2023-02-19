@@ -11,6 +11,8 @@ import Home from "../screens/Home";
 import NotificationScreen from "../screens/NotificationScreen";
 import TaskMaker from "../screens/TaskMaker";
 import Settings from "../screens/Settings";
+import { Feather } from '@expo/vector-icons'; 
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 const MainStack = createNativeStackNavigator();
 const Main = () => {
@@ -52,7 +54,18 @@ const MainTabs = () => {
           ),
         }}
       />
-
+      <Tabs.Screen
+        name="Add Task"
+        component={Home}
+        options={{
+          tabBarLabel: ({ focused }) => (
+            <TabBarText focused={focused} title="Add Task" />
+          ),
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} icon={"ios-add-circle"} />
+          ),
+        }}
+      />
       <Tabs.Screen
         name="Settings"
         component={Settings}
