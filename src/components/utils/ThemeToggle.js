@@ -18,7 +18,15 @@ const DarkModeToggle = () => {
         { value: 'light', label: <FontAwesomeIcon name="sun-o" /> },
         { value: 'dark', label: <FontAwesomeIcon name="moon-o" /> },
       ]}
-      value={isDarkMode ? 'dark' : 'light'}
+      text={isDarkmode ? "Light Mode" : "Dark Mode"}
+              status={isDarkmode ? "success" : "warning"}
+              onPress={() => {
+                if (isDarkmode) {
+                  
+                } else {
+                  setTheme("dark");
+                }
+              }}
       onChange={handleToggle}
     />
   );
