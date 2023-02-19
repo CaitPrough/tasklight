@@ -8,7 +8,7 @@ import TabBarIcon from "../components/utils/TabBarIcon";
 import TabBarText from "../components/utils/TabBarText";
 
 import Home from "../screens/Home";
-import SecondScreen from "../screens/SecondScreen";
+import SecondScreen from "../screens/TaskMaker";
 import Settings from "../screens/Settings";
 
 const MainStack = createNativeStackNavigator();

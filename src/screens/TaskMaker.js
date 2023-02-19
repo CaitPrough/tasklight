@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View } from "react-native";
 import {
   Layout,
@@ -12,6 +12,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function ({ navigation }) {
   const { isDarkmode } = useTheme();
+  const [text, setText] = useState('Useless Text');
   return (
     <Layout>
       <TopNav
@@ -34,7 +35,7 @@ export default function ({ navigation }) {
       >
         {/* This text using ubuntu font */}
         <Text fontWeight="bold">This is the second screen</Text>
-        {/*
+        
         <Text>TextInput</Text>
         
             <TextInput
@@ -42,7 +43,7 @@ export default function ({ navigation }) {
                 value={text}
                 onChangeText={(val) => setText(val)}
             />
-      */}
+      
       </View>
     </Layout>
   );
