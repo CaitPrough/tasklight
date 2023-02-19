@@ -30,14 +30,14 @@ function randomMessage(array) {
     return array[rand]
 }
 
-export function returnMessage() {
+ function returnMessage() {
     return (isAngry() ? randomMessage(insultsList) : randomMessage(congratsList))
 }
 
-export function returnTitleUpcoming() {
+ function returnTitleUpcoming() {
     return (isAngry() ? "You are going to miss another task!" : "You have a task due soon!")
 }
 
-export function returnTitleOverdue() {
+ function returnTitleOverdue() {
     return (isAngry() ? "You missed another task!" : "YOU MISSED A TASK? NOW I'M MAD >:(")
 }
