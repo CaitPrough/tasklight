@@ -1,5 +1,4 @@
 import React from "react"
-import AppNavigator from "../../navigation/AppNavigator";
 import { ThemeProvider} from "react-native-rapi-ui";
 
 // the two arrays that contain all tasks
