@@ -17,13 +17,13 @@ let insultsList = [
 
 let congratsList = [
     "What took you so long?",
-    "Congratulations, but you aren't out of the woods yet",
-    "No time to waste, you still have a lot of tasks to finish",
+    "Congratulations, but you aren't out of the woods yet.",
+    "No time to waste, you still have a lot of tasks to finish.",
 ]
 
 let gaslightList = [
-    "Your task is overdue... NOT! It's actually due in a few days, so this is your last chance to prove yourself",
-    "Might want to get to work on the tasks that are due soon, because you never know if these are the actual due dates",
+    "Your task is overdue... NOT! It's actually due in a few days, so this is your last chance to prove yourself.",
+    "Might want to get to work on the tasks that are due soon, because you never know if these are the actual due dates.",
     
 ]
 
