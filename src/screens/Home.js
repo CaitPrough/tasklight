@@ -8,11 +8,18 @@ import {
   SectionContent,
   useTheme,
 } from "react-native-rapi-ui";
+import pxToEm from '../components/utils/pxToEm';
+import pxtoRem from '../components/utils/pxToRem';
+
 
 export default function ({ navigation }) {
+    const { isDarkmode, setTheme } = useTheme();
     //To do list
-    return 
+    return (
     <Layout>
+        <View style={{alignItems:"center", marginVertical:pxToEm(10)}}>
 
-    </Layout>;
+        </View>
+    </Layout>
+    )
 }
