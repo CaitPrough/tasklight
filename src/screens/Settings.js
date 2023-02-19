@@ -1,17 +1,21 @@
 import React from 'react';
 import DarkModeToggle from '../components/utils/ThemeToggle';
+import pxToRem from '../components/utils/pxToRem';
 import { View } from 'react-native'
-import { Box, Text } from 'react-native-rapi-ui';
+import { Box, Layout, Text } from 'react-native-rapi-ui';
 
 const SettingsPage = () => {
   return (
-    <View>
-      <Text as="h2">Settings</Text>
-      <View>
-        <Text as="h3">Appearance</Text>
-        <DarkModeToggle />
-      </View>
-    </View>
+    <Layout>
+        <View style={{ marginHorizontal:pxToRem(20), textAlign: "Left" }}>
+            <Text fontWeight="bold" >Settings</Text>
+            <Text>Appearance</Text>
+        </View>
+        <View>
+            
+        </View>
+        <DarkModeToggle/>
+    </Layout>
   );
 };
 

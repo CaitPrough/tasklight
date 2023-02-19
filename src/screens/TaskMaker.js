@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View } from "react-native";
 import {
   Layout,
@@ -6,15 +6,17 @@ import {
   Text,
   themeColor,
   useTheme,
+  TextInput,
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function ({ navigation }) {
   const { isDarkmode } = useTheme();
+  const [text, setText] = useState('Useless Text');
   return (
     <Layout>
       <TopNav
-        middleContent="Second Screen"
+        middleContent="Task Maker"
         leftContent={
           <Ionicons
             name="chevron-back"
@@ -33,6 +35,15 @@ export default function ({ navigation }) {
       >
         {/* This text using ubuntu font */}
         <Text fontWeight="bold">This is the second screen</Text>
+        
+        <Text>TextInput</Text>
+        
+            <TextInput
+                placeholder="Enter your text"
+                value={text}
+                onChangeText={(val) => setText(val)}
+            />
+      
       </View>
     </Layout>
   );
