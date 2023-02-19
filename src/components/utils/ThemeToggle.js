@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, Linking } from 'react-native';
 import FontAwesomeIcon from '@expo/vector-icons/FontAwesome'
 import { Picker, useTheme, Section, SectionContent, Layout } from 'react-native-rapi-ui';
-import currentTheme from './CheckTheme';
+//import currentTheme from './CheckTheme';
+//Unsused and not needed anymore but im keeping it here anyway because I wasted 20 minutes on it
 
 const DarkModeToggle = () => {
   const [pickerValue, setPickerValue] = React.useState(null);

@@ -1,7 +1,5 @@
 import React from 'react';
 import DarkModeToggle from '../components/utils/ThemeToggle';
-import pxToRem from '../components/utils/pxToRem';
-import pxToEm from '../components/utils/pxToEm';
 import { ScrollView, View } from 'react-native'
 import { Box, Layout, Text } from 'react-native-rapi-ui';
 
