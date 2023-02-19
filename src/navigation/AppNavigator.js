@@ -10,7 +10,6 @@ import TabBarText from "../components/utils/TabBarText";
 import Home from "../screens/Home";
 import SecondScreen from "../screens/SecondScreen";
 import Settings from "../screens/Settings";
-import Profile from "../screens/Profile";
 
 const MainStack = createNativeStackNavigator();
 const Main = () => {
@@ -52,18 +51,7 @@ const MainTabs = () => {
           ),
         }}
       />
-      <Tabs.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarLabel: ({ focused }) => (
-            <TabBarText focused={focused} title="Profile" />
-          ),
-          tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"person"} />
-          ),
-        }}
-      />
+
       <Tabs.Screen
         name="Settings"
         component={Settings}
