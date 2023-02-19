@@ -8,11 +8,12 @@ import {
   useTheme,
   TextInput,
 } from "react-native-rapi-ui";
+import DateTimePicker from 'react-datetime-picker'
 import { Ionicons } from "@expo/vector-icons";
 
 export default function ({ navigation }) {
   const { isDarkmode } = useTheme();
-  const [text, setText] = useState('Useless Text');
+  const [text, setText] = useState('Enter Here');
   return (
     <Layout>
       <TopNav
@@ -36,13 +37,14 @@ export default function ({ navigation }) {
         {/* This text using ubuntu font */}
         <Text fontWeight="bold">This is the second screen</Text>
         
-        <Text>TextInput</Text>
-        
-            <TextInput
-                placeholder="Enter your text"
-                value={text}
-                onChangeText={(val) => setText(val)}
-            />
+        <TextInput
+            placeholder="Enter your text"
+            value={text}
+            onChangeText={(val) => setText(val)}
+        />
+
+        <Text>Date and Time to complete task</Text>
+        <DateTimePicker />
       
       </View>
     </Layout>
