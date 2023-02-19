@@ -1,5 +1,5 @@
 import {useState} from "react";
-import { View, Linking, ScrollView } from "react-native";
+import { View, Linking, ScrollView, text } from "react-native";
 import FontAwesomeIcon from '@expo/vector-icons/FontAwesome'
 import {
   Layout,
@@ -13,6 +13,7 @@ import {
 import TaskInput from "../components/utils/NewTask";
 
 
+
 const AddTaskPage = () => {
     const [text, setText] = useState('');
     const { isDarkmode, setTheme } = useTheme();
@@ -23,10 +24,11 @@ const AddTaskPage = () => {
                 <Text size="h1" fontWeight="bold" style={{color: isDarkmode ? 'white' : 'black'}}>Tasklight <FontAwesomeIcon size={35} name="lightbulb-o"></FontAwesomeIcon> </Text>
                 <Text size="h3" fontWeight="bold" style={{ marginVertical: 15 }}>What would you like to get done?</Text>
             </View>
-            <View>
+            <View >
+
                 <Section>
-                    <SectionContent>
-                        <Text style={{alignItems:"left", marginBottom:15}} >Task</Text>
+                    <SectionContent >
+                        <Text size="xl" style={{alignItems:"left", marginBottom:15}} >Add a Task</Text>
                         <TextInput style={{marginHorizontal:16, marginVertical:5}}
                             placeholder="Enter a Task"
                             value={text}
@@ -35,9 +37,7 @@ const AddTaskPage = () => {
                                 <FontAwesomeIcon name="pencil" size={30} />
                             }
                         />
-                        
-                        <Button text="Tap me" onPress={() => alert('Pressed')} />;
-                        
+                        <Button text="Add" style={{marginTop:15}} onPress={() => alert('Button tapped')} ></Button>
                     </SectionContent>
                 </Section>
             </View>
