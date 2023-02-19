@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Linking } from "react-native";
+import { View, Linking, ScrollView } from "react-native";
+import FontAwesomeIcon from '@expo/vector-icons/FontAwesome'
 import {
   Layout,
   Button,
@@ -7,58 +8,52 @@ import {
   Section,
   SectionContent,
   useTheme,
+  TextInput,
+  CheckBox,
 } from "react-native-rapi-ui";
+import TaskInput from "../components/utils/NewTask";
+//import Forms from "../components/testincomponent";
+
 
 export default function ({ navigation }) {
-  const { isDarkmode, setTheme } = useTheme();
-  return (
+    const { isDarkmode, setTheme } = useTheme();
+    const [checkBox, setCheckbox] = React.useState(false)
+    //To do list
+    return (
     <Layout>
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          marginHorizontal: 20,
-        }}
-      >
-        <Section>
-          <SectionContent>
-            <Text fontWeight="bold" style={{ textAlign: "center" }}>
-              These UI components provided by Rapi UI
-            </Text>
-            <Button
-              style={{ marginTop: 10 }}
-              text="Rapi UI Documentation"
-              status="info"
-              onPress={() => Linking.openURL("https://rapi-ui.kikiding.space/")}
-            />
-            <Button
-              text="Go to second screen"
-              onPress={() => {
-                navigation.navigate("SecondScreen");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-
-            <Button
-              text={isDarkmode ? "Light Mode" : "Dark Mode"}
-              status={isDarkmode ? "success" : "warning"}
-              onPress={() => {
-                if (isDarkmode) {
-                  setTheme("light");
-                } else {
-                  setTheme("dark");
-                }
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-          </SectionContent>
-        </Section>
-      </View>
+        <ScrollView>
+            <View style={{alignItems:"center", marginVertical:20}}>
+                <Text size="h1" fontWeight="bold" style={{color: isDarkmode ? 'white' : 'black'}}>Tasklight <FontAwesomeIcon size={35} name="lightbulb-o"></FontAwesomeIcon> </Text>
+            </View>
+            <View style={{flexDirection: 'row', alignItems:"center", marginVertical:10, marginHorizontal:20}}>
+            <CheckBox value={checkBox} onValueChange={(val) => setCheckbox(val)} />
+                <Section style={{marginHorizontal:20, alignItems:"center"}}>
+                    <SectionContent>
+                        <Text>Welcome</Text>
+                    </SectionContent>
+                </Section>
+            </View>
+            <View style={{flexDirection: 'row', alignItems:"center", marginVertical:10, marginHorizontal:20}}>
+            <CheckBox value={checkBox} onValueChange={(val) => setCheckbox(val)} />
+                <Section style={{marginHorizontal:20, alignItems:"center"}}>
+                    <SectionContent>
+                        <Text>Welcome</Text>
+                    </SectionContent>
+                </Section>
+            </View>
+            <View style={{flexDirection: 'row', alignItems:"center", marginVertical:10, marginHorizontal:20}}>
+            <CheckBox value={checkBox} onValueChange={(val) => setCheckbox(val)} />
+                <Section style={{marginHorizontal:20, alignItems:"center"}}>
+                    <SectionContent>
+                        <Text>Welcome</Text>
+                    </SectionContent>
+                </Section>
+            </View>
+            
+        </ScrollView>
+                 
+        
+   
     </Layout>
-  );
+    )
 }

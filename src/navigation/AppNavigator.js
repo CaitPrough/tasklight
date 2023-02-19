@@ -8,9 +8,11 @@ import TabBarIcon from "../components/utils/TabBarIcon";
 import TabBarText from "../components/utils/TabBarText";
 
 import Home from "../screens/Home";
-import SecondScreen from "../screens/SecondScreen";
-import About from "../screens/About";
-import Profile from "../screens/Profile";
+import NotificationScreen from "../screens/NotificationScreen";
+import Settings from "../screens/Settings";
+import { Feather } from '@expo/vector-icons'; 
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import AddTaskPage from "../screens/AddTaskPage";
 
 const MainStack = createNativeStackNavigator();
 const Main = () => {
@@ -21,7 +23,6 @@ const Main = () => {
       }}
     >
       <MainStack.Screen name="MainTabs" component={MainTabs} />
-      <MainStack.Screen name="SecondScreen" component={SecondScreen} />
     </MainStack.Navigator>
   );
 };
@@ -41,35 +42,47 @@ const MainTabs = () => {
     >
       {/* these icons using Ionicons */}
       <Tabs.Screen
-        name="Home"
+        name="To-Do"
         component={Home}
         options={{
           tabBarLabel: ({ focused }) => (
-            <TabBarText focused={focused} title="Home" />
+            <TabBarText focused={focused} title="To-Do" />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"md-home"} />
+            <TabBarIcon focused={focused} icon={"list"} />
           ),
         }}
       />
       <Tabs.Screen
-        name="Profile"
-        component={Profile}
+        name="Add Task"
+        component={AddTaskPage}
         options={{
           tabBarLabel: ({ focused }) => (
-            <TabBarText focused={focused} title="Profile" />
+            <TabBarText focused={focused} title="Add Task" />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"person"} />
+            <TabBarIcon focused={focused} icon={"ios-add-circle"} />
           ),
         }}
       />
       <Tabs.Screen
-        name="About"
-        component={About}
+        name="Settings"
+        component={Settings}
         options={{
           tabBarLabel: ({ focused }) => (
-            <TabBarText focused={focused} title="About" />
+            <TabBarText focused={focused} title="Settings" />
+          ),
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} icon={"ios-settings"} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Notifications"
+        component={NotificationScreen}
+        options={{
+          tabBarLabel: ({ focused }) => (
+            <TabBarText focused={focused} title="Notifications" />
           ),
           tabBarIcon: ({ focused }) => (
             <TabBarIcon focused={focused} icon={"ios-information-circle"} />

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "withBottomTabs",
-    "slug": "withBottomTabs",
+    "name": "Tasklight",
+    "slug": "tasklight",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,6 +21,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c73dee8a-80de-44db-bd13-c279d8ecd983"
+      }
+    },
+    "owner": "lingywingy"
   }
 }
