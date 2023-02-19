@@ -8,7 +8,7 @@ import {
   useTheme,
   TextInput,
 } from "react-native-rapi-ui";
-import DateTimePicker from 'react-datetime-picker'
+import DateTimePicker from '@react-native-community/datetimepicker';
 import { Ionicons } from "@expo/vector-icons";
 
 export default function ({ navigation }) {

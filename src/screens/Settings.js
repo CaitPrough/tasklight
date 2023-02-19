@@ -16,12 +16,7 @@ const SettingsPage = () => {
                 <Text size="h3">Appearance</Text>           
             </View>
             <DarkModeToggle/>
-            <DarkModeToggle/>
-            <DarkModeToggle/>
-            <DarkModeToggle/>
-            <DarkModeToggle/>
-            <DarkModeToggle/>
-            <DarkModeToggle/>
+
         </ScrollView>
     </Layout>
   );
