@@ -37,7 +37,7 @@ const AddTaskPage = () => {
                                 <FontAwesomeIcon name="pencil" size={30} />
                             }
                         />
-                        <Button text="Add" style={{marginTop:15}}></Button>
+                        <Button text="Add" style={{marginTop:15}} onPress={() => alert('Button tapped')} ></Button>
                     </SectionContent>
                 </Section>
             </View>
