@@ -31,27 +31,7 @@ function isAngry() {
     return (Task.areTasksOverdue() ? true : false)
 }
 
-function randomMessage(array) {
+export function randomMessage(array) {
     let rand = Math.floor((Math.random() * array.length));
     return array[rand]
-}
-
-function returnMessage() {
-    return (isAngry() ? randomMessage(insultsList) : randomMessage(congratsList))
-}
-
-export function returnTitleUpcoming() {
-    if (isAngry()) {
-        return "You have a task due soon, stop slacking!"
-    } else {
-        return "You have a task due soon, don't forget :)"
-    }
-}
-
-export function returnTitleOverdue() {
-    if (isAngry()) {
-        return "You have ANOTHER task overdue!"
-    } else {
-        return "You forgot to do your task? Now I'm UPSET!"
-    }
 }
