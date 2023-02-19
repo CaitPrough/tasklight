@@ -2,8 +2,8 @@ import React from "react"
 import AppNavigator from "./src/navigation/AppNavigator";
 import { ThemeProvider} from "react-native-rapi-ui";
 
-let taskText = ["I am an example task. Add more below."]
-let taskDeadline = ["02/19/23"]
+let taskText = ["Finish coding Tasklight", "Do that overdue homework"]
+let taskDeadline = ["02/19/23", "02/15/23"]
 
 let whatDayIsIt = new Date()
 let todayDate = [whatDayIsIt.getMonth() + 1, whatDayIsIt.getDate(), parseInt(whatDayIsIt.getFullYear().toString().substring(2, 4))]
@@ -38,4 +38,16 @@ function isTaskOverdue(task, today = todayDate) {
     } else {
         return false
     }
+}
+
+function areTasksOverdue() {
+    for (let i = 0; taskText.length - 1; i++) {
+        if (isTaskOverdue(getTask(i))) {
+            return true
+        } else {
+            continue
+        }
+    }
+
+    return false
 }
