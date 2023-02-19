@@ -8,7 +8,7 @@ import TabBarIcon from "../components/utils/TabBarIcon";
 import TabBarText from "../components/utils/TabBarText";
 
 import Home from "../screens/Home";
-import SecondScreen from "../screens/TaskMaker";
+import TaskMaker from "../screens/TaskMaker";
 import Settings from "../screens/Settings";
 
 const MainStack = createNativeStackNavigator();
@@ -20,7 +20,7 @@ const Main = () => {
       }}
     >
       <MainStack.Screen name="MainTabs" component={MainTabs} />
-      <MainStack.Screen name="SecondScreen" component={SecondScreen} />
+      <MainStack.Screen name="TaskMaker" component={TaskMaker} />
     </MainStack.Navigator>
   );
 };
