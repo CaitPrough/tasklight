@@ -4,15 +4,14 @@ let insultsList = [
     "You're so lazy, you make a sloth look like Usain Bolt! Get back to work!",
     "The only thing more sluggish than you is a snail on sleeping pills.",
     "How have you repeatedly neglected to complete this task?! It might be easier if you even STARTED it",
-    "You make boulders look like record breaking sprinters",
     "I'd call you a couch potato, but that would be an insult to couches and potatoes",
     "At this rate, this project is like a car with no gas: going nowhere fast",
     "I wouldn't be surprised if you found a way to procrastinate napping",
     "You are the epitome of lethargy.",
-    "I am painfully disappointed in you",
+    "I am disappointed in you.",
     "Even ChatGPT is more stubborn than you",
     "The only exercise you get is running away from your responsibilities",
-    'I would say "at least you tried," but you probably didn\'t',
+    'I would say "at least you tried," but I don\'t think you did',
     "The English language cannot accurately express the magnitude of your laziness"
 ]
 
@@ -30,4 +29,13 @@ let gaslightList = [
 
 function isAngry() {
     return (Task.areTasksOverdue() ? true : false)
+}
+
+function randomMessage(array) {
+    let rand = Math.floor((Math.random() * array.length));
+    return array[rand]
+}
+
+function returnMessage() {
+    return (isAngry() ? randomMessage(insultsList) : randomMessage(congratsList))
 }
