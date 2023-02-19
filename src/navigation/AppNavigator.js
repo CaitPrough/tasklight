@@ -9,6 +9,7 @@ import TabBarText from "../components/utils/TabBarText";
 
 import Home from "../screens/Home";
 import SecondScreen from "../screens/SecondScreen";
+import NotificationScreen from "../screens/NotificationScreen";
 import Settings from "../screens/Settings";
 import Profile from "../screens/Profile";
 
@@ -70,6 +71,18 @@ const MainTabs = () => {
         options={{
           tabBarLabel: ({ focused }) => (
             <TabBarText focused={focused} title="Settings" />
+          ),
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} icon={"ios-information-circle"} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Notifications"
+        component={NotificationScreen}
+        options={{
+          tabBarLabel: ({ focused }) => (
+            <TabBarText focused={focused} title="Notifications" />
           ),
           tabBarIcon: ({ focused }) => (
             <TabBarIcon focused={focused} icon={"ios-information-circle"} />
